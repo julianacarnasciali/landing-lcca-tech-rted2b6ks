@@ -25,9 +25,9 @@ const LOGO_NADOLIVRE = `${GESTOR_FILES}/kywgs0371k9j2ll/nadolivre_120_26soserdrz
 const LOGO_MARCOL = `${GESTOR_FILES}/5ihvmolbi0mqas6/marcol_120_akzdr5v0g7.jpg`
 const LOGO_OLIMPICA = `${GESTOR_FILES}/tgetqnwvmnibxfv/olimpica_120_vdw138ohqv.jpg`
 // LOGO DA LCCA TECH (a oficial, aprovada 12/10): lockup completo + versão branca p/ hero
-const LOGO_LCCA = `${GESTOR_FILES}/o0uaar103wo3m3k/logo_full_kgwjeqdeyc.png`
-const LOGO_LCCA_BRANCA = `${GESTOR_FILES}/uzsu62yoznlmzvo/logo_full_branco_057hwekwuv.png`
-const LOGO_SIMBOLO = `${GESTOR_FILES}/ai3g281zexap7kp/logo_simbolo_x15paxzcm2.png`
+const LOGO_LCCA = `${GESTOR_FILES}/ui6s8ubelriepmj/full_navy_pzrxnr40bo.png`
+const LOGO_LCCA_BRANCA = `${GESTOR_FILES}/ib0smsxri8sw6q2/full_branco_y8024354gz.png`
+const LOGO_SIMBOLO = `${GESTOR_FILES}/9zb90olapcv6t1f/simbolo_navy_ioukhyk01x.png`
 
 const CSS = `
 .lc-root{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:#1F2937;background:#fff;line-height:1.6}
