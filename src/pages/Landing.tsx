@@ -24,6 +24,10 @@ const LOGO_MOINHO = `${GESTOR_FILES}/t1xi4s87o5jstao/moinho_120_ittnrms4g8.jpg`
 const LOGO_NADOLIVRE = `${GESTOR_FILES}/kywgs0371k9j2ll/nadolivre_120_26soserdrz.jpg`
 const LOGO_MARCOL = `${GESTOR_FILES}/5ihvmolbi0mqas6/marcol_120_akzdr5v0g7.jpg`
 const LOGO_OLIMPICA = `${GESTOR_FILES}/tgetqnwvmnibxfv/olimpica_120_vdw138ohqv.jpg`
+// LOGO DA LCCA TECH (a oficial, aprovada 12/10): lockup completo + versão branca p/ hero
+const LOGO_LCCA = `${GESTOR_FILES}/o0uaar103wo3m3k/logo_full_kgwjeqdeyc.png`
+const LOGO_LCCA_BRANCA = `${GESTOR_FILES}/uzsu62yoznlmzvo/logo_full_branco_057hwekwuv.png`
+const LOGO_SIMBOLO = `${GESTOR_FILES}/ai3g281zexap7kp/logo_simbolo_x15paxzcm2.png`
 
 const CSS = `
 .lc-root{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:#1F2937;background:#fff;line-height:1.6}
@@ -179,9 +183,11 @@ export default function Landing() {
       {/* HERO */}
       <div className="lc-hero">
         <div className="lc-container">
-          <div style={{ letterSpacing: 3, fontWeight: 800, fontSize: '1.5rem', marginBottom: 26 }}>
-            LCCA <span style={{ color: '#7DE0D3' }}>TECH</span>
-          </div>
+          <img
+            src={LOGO_LCCA_BRANCA}
+            alt="LCCA Tech"
+            style={{ width: 240, maxWidth: '70%', marginBottom: 26 }}
+          />
           <h1>
             Seus equipamentos em operação.
             <br />
@@ -469,7 +475,11 @@ export default function Landing() {
         <div className="lc-container">
           <div>
             <div className="marca">
-              LCCA <span style={{ color: '#7DE0D3' }}>TECH</span>
+              <img
+                src={LOGO_LCCA_BRANCA}
+                alt="LCCA Tech"
+                style={{ width: 170, marginBottom: 12 }}
+              />
             </div>
             <p style={{ marginTop: 10 }}>
               Locação de impressoras, computadores e servidores
