@@ -21,8 +21,9 @@ const LOGO_SAFEDEMO = `${GESTOR_FILES}/xi8vn7tqzw67h8w/safedemo_120_9gz2npry75.j
 const LOGO_JANDIRA = `${GESTOR_FILES}/wxsumy2qi8r0384/jandira_120_o27cqzhehj.jpg`
 const LOGO_COPEC = `${GESTOR_FILES}/v1159p83yvoso42/copec_120_2cwsgbk9ww.jpg`
 const LOGO_MOINHO = `${GESTOR_FILES}/t1xi4s87o5jstao/moinho_120_ittnrms4g8.jpg`
-const LOGO_NADOLIVRE = iniciais('NL', 'NADO LIVRE')
-const LOGO_MARCOL = iniciais('MS', 'MARCOL')
+const LOGO_NADOLIVRE = `${GESTOR_FILES}/kywgs0371k9j2ll/nadolivre_120_26soserdrz.jpg`
+const LOGO_MARCOL = `${GESTOR_FILES}/5ihvmolbi0mqas6/marcol_120_akzdr5v0g7.jpg`
+const LOGO_OLIMPICA = `${GESTOR_FILES}/tgetqnwvmnibxfv/olimpica_120_vdw138ohqv.jpg`
 
 const CSS = `
 .lc-root{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:#1F2937;background:#fff;line-height:1.6}
@@ -117,7 +118,7 @@ const CASES = [
     anos: '6 anos',
   },
   {
-    logo: iniciais('AO', 'OLÍMPICA'),
+    logo: LOGO_OLIMPICA,
     nome: 'Academia Olímpica',
     txt: 'Uma das academias de natação mais tradicionais de Curitiba — 6+ anos de parceria.',
     anos: '6 anos',
