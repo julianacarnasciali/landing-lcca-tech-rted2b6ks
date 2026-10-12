@@ -7,6 +7,23 @@ import { useState } from 'react'
 const GESTOR_API =
   'https://gestor-de-aluguel-de-equipamentos-e924e.shrd00.internal.goskip.dev/backend/v1/leads'
 
+// Logos reais dos cases (hospedadas no banco do gestor — coleção "arquivos",
+// servidas pela URL interna que o bundle já usa). 2 sem logo: iniciais SVG.
+const GESTOR_FILES =
+  'https://gestor-de-aluguel-de-equipamentos-e924e.shrd00.internal.goskip.dev/api/files/arquivos'
+const iniciais = (a: string, b: string) =>
+  'data:image/svg+xml;utf8,' +
+  encodeURIComponent(
+    `<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'><rect width='120' height='120' rx='16' fill='#0F2A43'/><text x='60' y='58' text-anchor='middle' font-family='Arial' font-size='30' font-weight='800' fill='#ffffff'>${a}</text><text x='60' y='82' text-anchor='middle' font-family='Arial' font-size='11' fill='#7DE0D3'>${b}</text></svg>`,
+  )
+const LOGO_MAXI = `${GESTOR_FILES}/rxar490cgeun5od/maxi_120_7dlitjrpft.jpg`
+const LOGO_SAFEDEMO = `${GESTOR_FILES}/xi8vn7tqzw67h8w/safedemo_120_9gz2npry75.jpg`
+const LOGO_JANDIRA = `${GESTOR_FILES}/wxsumy2qi8r0384/jandira_120_o27cqzhehj.jpg`
+const LOGO_COPEC = `${GESTOR_FILES}/v1159p83yvoso42/copec_120_2cwsgbk9ww.jpg`
+const LOGO_MOINHO = `${GESTOR_FILES}/t1xi4s87o5jstao/moinho_120_ittnrms4g8.jpg`
+const LOGO_NADOLIVRE = iniciais('NL', 'NADO LIVRE')
+const LOGO_MARCOL = iniciais('MS', 'MARCOL')
+
 const CSS = `
 .lc-root{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:#1F2937;background:#fff;line-height:1.6}
 .lc-root .lc-container{max-width:1120px;margin:0 auto;padding:0 24px}
@@ -76,49 +93,49 @@ const CSS = `
 
 const CASES = [
   {
-    logo: 'SD',
+    logo: LOGO_SAFEDEMO,
     nome: 'Safe Demo do Brasil',
     txt: 'Atendemos desde 2013 a unidade brasileira da Safe Demo, líder mundial em tampas de airbag — 9 equipamentos em operação, padrão IATF.',
     anos: 'desde 2013',
   },
   {
-    logo: 'MG',
+    logo: LOGO_MAXI,
     nome: 'Maxi Gráfica',
     txt: '16 equipamentos em operação contínua na gráfica eleita Top 10 do Brasil, certificada FSC® e F.A.M.A. (Disney).',
     anos: '10+ anos',
   },
   {
-    logo: 'MS',
+    logo: LOGO_MARCOL,
     nome: 'Marcol Software',
     txt: '13 anos cuidando da TI de uma empresa de tecnologia — o nosso relacionamento mais longo.',
     anos: '13 anos',
   },
   {
-    logo: 'CP',
+    logo: LOGO_COPEC,
     nome: 'Clínica COPEC',
     txt: '6 anos cuidando de impressoras e servidores da primeira clínica de otorrinopediatria do Paraná.',
     anos: '6 anos',
   },
   {
-    logo: 'AO',
+    logo: iniciais('AO', 'OLÍMPICA'),
     nome: 'Academia Olímpica',
     txt: 'Uma das academias de natação mais tradicionais de Curitiba — 6+ anos de parceria.',
     anos: '6 anos',
   },
   {
-    logo: 'NL',
+    logo: LOGO_NADOLIVRE,
     nome: 'Nado Livre',
     txt: 'Gestão multiunidade: mesmo grupo, várias sedes, contratos e pacotes distintos — 6 anos.',
     anos: '6 anos',
   },
   {
-    logo: 'JA',
+    logo: LOGO_JANDIRA,
     nome: 'Jandira Alimentos',
     txt: 'Indústria paranaense com 70 anos de história — locação crescente, setor a setor.',
     anos: '2 anos',
   },
   {
-    logo: 'DH',
+    logo: LOGO_MOINHO,
     nome: 'Moinho Dona Hilda',
     txt: 'Implantamos toda a infraestrutura da expansão — servidores, câmeras, rede — com visitas de obra.',
     anos: 'projeto completo',
@@ -294,7 +311,15 @@ export default function Landing() {
           <div className="lc-grid2">
             {CASES.map((c) => (
               <div className="lc-case" key={c.nome}>
-                <div className="logo">{c.logo}</div>
+                <div className="logo">
+                  <img
+                    src={c.logo}
+                    alt={c.nome}
+                    width={52}
+                    height={52}
+                    style={{ borderRadius: 12, objectFit: 'contain', background: '#fff' }}
+                  />
+                </div>
                 <div>
                   <h4>{c.nome}</h4>
                   <p>{c.txt}</p>
